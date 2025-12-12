@@ -61,6 +61,6 @@ Designed mobile-first with a premium layout:
 
 ## 📸 Screenshots (Add yours)
 
-Replace these with actual screenshots after running the project:
+
 
 /screenshots/
