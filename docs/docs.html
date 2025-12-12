@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flashcards App Documentation</title>
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f6fa;
+}
+
+/* Layout */
+.layout {
+    display: flex;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 260px;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background: #111827;
+    padding: 25px;
+    color: white;
+    overflow-y: auto;
+    transition: transform 0.3s ease;
+}
+
+.sidebar h2 {
+    margin-bottom: 20px;
+}
+
+.sidebar nav a {
+    display: block;
+    color: #cbd5e1;
+    padding: 10px 0;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.sidebar nav a:hover {
+    color: white;
+}
+
+/* Content */
+.content {
+    margin-left: 260px;
+    padding: 40px;
+    width: 100%;
+}
+
+.content h1 {
+    margin-bottom: 10px;
+    font-size: 28px;
+}
+
+.content p, .content li {
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+section {
+    margin-bottom: 45px;
+}
+
+pre {
+    background: #1e293b;
+    color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    overflow-x: auto;
+}
+
+/* Mobile Styles */
+.menu-btn {
+    display: none;
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    z-index: 999;
+    background: #111827;
+    color: white;
+    border: none;
+    padding: 10px 13px;
+    font-size: 22px;
+    border-radius: 6px;
+}
+
+@media (max-width: 900px) {
+    .menu-btn {
+        display: block;
+    }
+
+    .sidebar {
+        transform: translateX(-100%);
+    }
+
+    .sidebar.open {
+        transform: translateX(0);
+    }
+
+    .content {
+        margin-left: 0;
+        padding: 20px;
+    }
+}
+
+    </style>    
+</head>
+<body>
+
+    <!-- Mobile Toggle -->
+    <button id="menuBtn" class="menu-btn">☰</button>
+
+    <div class="layout">
+
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <h2>Flashcards Docs</h2>
+
+            <nav>
+                <a href="#intro">Introduction</a>
+                <a href="#features">Features</a>
+                <a href="#structure">Project Structure</a>
+                <a href="#usage">How to Use</a>
+                <a href="#study-mode">Study Mode</a>
+                <a href="#storage">Local Storage</a>
+                <a href="#theme">Theme</a>
+                <a href="#responsiveness">Responsiveness</a>
+                <a href="#faq">FAQ</a>
+            </nav>
+        </aside>
+
+        <!-- Content -->
+        <main class="content">
+
+            <section id="intro">
+                <h1>Introduction</h1>
+                <p>
+                    The Flashcards App is a modern, lightweight, offline-capable tool that helps 
+                    learners study through spaced repetition and interactive card flipping.
+                </p>
+            </section>
+
+            <section id="features">
+                <h1>Features</h1>
+                <ul>
+                    <li>Create, flip, and delete cards</li>
+                    <li>Dark/Light theme</li>
+                    <li>Responsive grid layout</li>
+                    <li>LocalStorage saving</li>
+                    <li>Study Mode navigation</li>
+                    <li>Search & filtering</li>
+                </ul>
+            </section>
+
+            <section id="structure">
+<pre><code>
+flashcards-app/
+│
+├── index.html
+├── style.css
+├── app.js
+│
+└── docs/
+    ├── docs.html
+    ├── docs.css
+    └── docs.js
+</code></pre>
+            </section>
+
+            <section id="usage">
+                <h1>Usage</h1>
+                <p>Create a card → click card to flip → right-click to delete.</p>
+            </section>
+
+            <section id="study-mode">
+                <h1>Study Mode</h1>
+                <p>Study cards individually with flip, next, and previous controls.</p>
+            </section>
+
+            <section id="storage">
+                <h1>LocalStorage</h1>
+<pre><code>
+localStorage.setItem("flashcards", JSON.stringify(cards));
+</code></pre>
+            </section>
+
+            <section id="theme">
+                <h1>Theme</h1>
+                <p>Light and dark themes using CSS variables.</p>
+            </section>
+
+            <section id="responsiveness">
+                <h1>Responsiveness</h1>
+                <p>
+                    On small screens the sidebar collapses and becomes a mobile drawer.
+                </p>
+            </section>
+
+            <section id="faq">
+                <h1>FAQ</h1>
+
+                <h3>Does it work offline?</h3>
+                <p>Yes.</p>
+
+                <h3>Does it save automatically?</h3>
+                <p>Yes, localStorage handles this.</p>
+            </section>
+
+        </main>
+
+    </div>
+
+    <script>
+// mobile menu toggle
+const menuBtn = document.getElementById("menuBtn");
+const sidebar = document.getElementById("sidebar");
+
+menuBtn.addEventListener("click", () => {
+    sidebar.classList.toggle("open");
+});
+
+document.querySelectorAll(".sidebar nav a").forEach(link => {
+    link.addEventListener("click", () => {
+        sidebar.classList.remove("open"); // close sidebar after selecting
+    });
+});
+
+// smooth scroll
+document.querySelectorAll("nav a").forEach(a => {
+    a.addEventListener("click", e => {
+        e.preventDefault();
+        const id = a.getAttribute("href");
+        document.querySelector(id).scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+        });
+    });
+});
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FlashStudy</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body data-theme="light">
+
+    <header class="topbar">
+        <div class="brand">
+            <div class="logo">F</div>
+            <h1>FlashStudy</h1>
+        </div>
+
+
+        <div class="actions">
+            <a href="docs/docs.html" style="text-decoration: none;">docs</a>
+            <button id="themeToggle" class="btn ghost">Light</button>
+        </div>
+    </header>
+
+    <div class="container">
+        <main class="content">
+            <div class="toolbar">
+                <input id="search" class="input" placeholder="Search cards..." />
+                <select id="filter" class="input select">
+                    <option value="all">All</option>
+                    <option value="known">Known</option>
+                    <option value="unknown">Unknown</option>
+                </select>
+            </div>
+
+            <section id="cardsList" class="cards"></section>
+        </main>
+
+        <aside class="sidebar">
+            <h2>Create Card</h2>
+            <form id="cardForm">
+                <input id="qInput" class="input" placeholder="Question" required />
+                <textarea id="aInput" class="input textarea" placeholder="Answer" required></textarea>
+                <button type="submit" class="btn primary full">Save</button>
+            </form>
+
+            <h2 style="margin-top: 25px;">Study Mode</h2>
+            <button id="startStudy" class="btn full">Start Study</button>
+
+            <div id="studyPanel" class="study hidden">
+                <p id="studyProgress" class="tag"></p>
+                <div id="studyCard" class="study-card"></div>
+                <div class="study-controls">
+                    <button id="prevCard" class="btn small">Prev</button>
+                    <button id="flipStudy" class="btn small">Flip</button>
+                    <button id="nextCard" class="btn small">Next</button>
+                </div>
+            </div>
+        </aside>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
+
+
+
+<!-- Project description: Students will build an interactive flashcards web app that allows users to create, flip and 
+study question-answer cards. This project model's distinctions flashcard feature, fostering spaced repetition
+learning and study engagement.
+Project goal: To develop a flashcard app where users can create cards, flip between front and back and store data locally.
+
+Target audience: Students studying vocabulary, key terms or course topics.
+
+Project scope: 
+
+core features: 
+1. create, view, and delete flashcards
+2. flip animations to show Q/A 
+3. Store cards in localstorage progress indicator(optional)
+4. Responsive grid/card layout
+5. smooth transition for flips
+6. Light/dark mode toggle
+
+Logic and functionality: 
+1. JS array for storing card data 
+2. CRUD operations for card management -->
