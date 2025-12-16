@@ -73,10 +73,8 @@ Built mobile-first with a premium layout approach:
 All application screenshots are available in the **`/screenshots`** folder of this repository.
 
 Included:
-- Flashcards grid view  
-- Study mode interface  
-- Light and dark themes  
-- Mobile responsiveness  
+- Desktop View  
+- Mobile view  
 
 ---
 
@@ -95,7 +93,7 @@ The project is intentionally built without frameworks to demonstrate strong **co
 ## 📊 Presentation Slides
 
 📄 **Presentation (PDF):**  
-`/presentation/flashcards-project-slides.pdf`
+`/presentation/flashStudy-project-slides.pdf`
 
 *(Uploaded directly to this repository as required — not Google Drive)*
 
