@@ -7,7 +7,7 @@ if (!cards || cards.length === 0) {
         { q: "What is CSS?", a: "The styling of a webpage.", status: "unknown" },
         { q: "What is JavaScript?", a: "The logic of a webpage.", status: "unknown" }
     ];
-    
+
     localStorage.setItem("flashcards", JSON.stringify(cards));
 }
 
@@ -106,6 +106,7 @@ function updateStudy() {
         ? cards[studyIndex].q
         : cards[studyIndex].a;
 }
+
 
 document.getElementById("flipStudy").addEventListener("click", () => {
     studySide = studySide === "front" ? "back" : "front";
