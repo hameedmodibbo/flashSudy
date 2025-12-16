@@ -1,26 +1,30 @@
 /* ---------- ROOT THEME ---------- */
+/* ---------- ROOT THEME ---------- */
 :root {
-    --bg: #f5f7fa;
-    --card: rgba(255,255,255,0.6);
-    --glass: rgba(255,255,255,0.25);
-    --border: rgba(255,255,255,0.4);
-    --text: #0f172a;
-    --muted: #6b7280;
-    --accent: #6366f1;
+    --bg: #E0FBFC;
+    --card: rgba(194, 223, 227, 0.6);     /* #C2DFE3 */
+    --glass: rgba(194, 223, 227, 0.35);
+    --border: rgba(157, 180, 192, 0.6);   /* #9DB4C0 */
+    --text: #253237;
+    --muted: #5C6B73;
+    --accent: #253237;
     --radius: 14px;
-    --shadow: 0 12px 30px rgba(0,0,0,0.08);
+    --shadow: 0 12px 30px rgba(37, 50, 55, 0.18);
 }
-
 
 [data-theme="dark"] {
-    --bg: #0b1220;
-    --card: rgba(255,255,255,0.05);
-    --glass: rgba(255,255,255,0.06);
-    --border: rgba(255,255,255,0.1);
-    --text: #e2e8f0;
-    --muted: #94a3b8;
-    --shadow: 0 12px 40px rgba(0,0,0,0.5);
+    --bg: #253237;
+    --card: rgba(92, 107, 115, 0.35);     /* #5C6B73 */
+    --glass: rgba(92, 107, 115, 0.25);
+    --border: rgba(157, 180, 192, 0.35);  /* #9DB4C0 */
+    --text: #E0FBFC;
+    --muted: #C2DFE3;
+    --shadow: 0 12px 40px rgba(0, 0, 0, 0.55);
 }
+
+
+
+ 
 
 /* ---------- GLOBAL ---------- */
 body {
