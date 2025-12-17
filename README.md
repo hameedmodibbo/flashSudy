@@ -93,7 +93,7 @@ The project is intentionally built without frameworks to demonstrate strong **co
 ## 📊 Presentation Slides
 
 📄 **Presentation (PDF):**  
-`/presentation/flashStudy-project-slides.pdf`
+https://github.com/hameedmodibbo/flashSudy/blob/main/presentation/flashStudy-project-slides.pdf)
 
 *(Uploaded directly to this repository as required — not Google Drive)*
 
